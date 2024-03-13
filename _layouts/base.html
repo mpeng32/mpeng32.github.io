@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  {%- assign stylesheet = page.stylesheet | default: "/assets/css/main.css" | relative_url -%}
+  {%- include metadata/head.html stylesheet=stylesheet -%}
+  <div class="container.fluid">
+    <body>
+      {%- include header/header.html -%}
+      <hr>
+      <main class="page-content" aria-label="Content">
+        {{ content }}
+      </main>
+      {%- include footer/footer.html -%}
+    </body>
+  </div>
+</html>

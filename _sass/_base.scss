@@ -1,0 +1,31 @@
+// Basic styling used globally
+a {
+  &.no-underline {
+    &:link, &:active {
+      color: $grey-color;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $black-color;
+    }
+    &:visited {
+      color: $purple-color;
+    }
+  }
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  &.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// Global variable and mixin definitions
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 1.5;
+$base-font-style: normal;
+
+$spacing-unit: 30px;
+
+$black-color: #212529;
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 20%);
+$grey-color-dark: darken($grey-color, 20%);
+$purple-color: #6e5494;
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@import
+  "base",
+  "layout";

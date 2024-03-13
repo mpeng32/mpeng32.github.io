@@ -1,0 +1,7 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <!-- Every page that has a header_page category will be listed in the navbar -->
+    {%- assign page_paths = site.pages | where_exp: "page", "page.categories contains 'header_page'" | map: "path" -%}
+    {%- include header/nav.html page_paths=page_paths -%}
+  </div>
+</header>

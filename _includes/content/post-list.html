@@ -1,0 +1,31 @@
+{%- assign posts = paginator.posts | default: site.posts -%}
+{%- for category in include.categories | split -%}
+  {%- assign posts = posts | where_exp: "post", "post.categories contains category" -%}
+{%- endfor -%}
+{%- assign posts = posts | sort: "date" | reverse -%}
+{%- if posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in posts limit:include.max-items -%}
+    <li>
+      <header class="row mb-2">
+        <div class="col-6">
+          <h6 class="mb-0">
+            <a class="no-underline post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h6>
+          {%- if post.authors -%}
+            <span class="post-authors">{{ post.authors }}</span>
+          {%- endif -%}
+        </div>
+        <span class="col-6 text-end align-middle post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+      </header>
+      {%- if post.excerpt -%}
+      <div class="row">
+        <span class="post-excerpt">{{ post.excerpt }}</span>
+      </div>
+      {%- endif -%}
+    </li>
+      {%- endfor -%}
+  </ul>
+{%- endif -%}

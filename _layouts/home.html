@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<div class="container">
+  <div class="row">
+    <div class="col-3" id="sticky-sidebar">
+      <img src="{{ '/assets/images/profile-picture.jpg' | relative_url }}" class="img-fluid rounded-3 profile-picture" alt="Photo">
+      <h4>Michael Peng</h4>
+      {%- include content/social-list.html -%}
+    </div>
+    <div class="col-8 introduction">
+      {{ content }}
+      <h5>Recent Activity</h5>
+      {%- include content/post-list.html max-items=5 -%}
+    </div>
+</div>

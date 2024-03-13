@@ -1,0 +1,51 @@
+// Spacing and page-specific styling
+ul {
+  // Post list styling
+  &.post-list {
+    a.post-link {
+      text-decoration: none;
+      color: $black-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .post-authors {
+      @include relative-font-size(0.8);
+      color: $grey-color;
+    }
+
+    .post-date {
+      @include relative-font-size(0.7);
+      color: $grey-color;
+    }
+  }
+  
+  .post-excerpt {
+    @include relative-font-size(0.8);
+  }
+  
+  // Social media list styling
+  &.social-media-list {
+    @include relative-font-size(0.7);
+    color: $grey-color;
+
+    li {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    
+    // Align the icon and icon text
+    .svg-icon, .icon-text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+  }
+}
+
+// Footer styling
+.timestamp {
+  @include relative-font-size(0.5);
+  color: $grey-color-light;
+}

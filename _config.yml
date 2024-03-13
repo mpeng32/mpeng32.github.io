@@ -1,0 +1,17 @@
+author: Michael Peng
+description: About me and what I do.
+domain: mpeng32.github.io
+url: https://mpeng32.github.io
+github_username: mpeng32
+linkedin_username: michael-peng-556560157
+location: New York, NY
+last_updated: March 12, 2024
+
+# Plugin settings
+paginate: 5
+
+# Build settings
+plugins:
+  - jekyll-feed
+sass:
+  sass_dir: _sass

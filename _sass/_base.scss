@@ -2,14 +2,14 @@
 a {
   &.no-underline {
     &:link, &:active {
-      color: $grey-color;
+      color: $grey;
       text-decoration: none;
     }
     &:hover {
-      color: $black-color;
+      color: $black;
     }
     &:visited {
-      color: $purple-color;
+      color: $purple;
     }
   }
 }

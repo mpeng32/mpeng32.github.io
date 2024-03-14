@@ -4,7 +4,7 @@ ul {
   &.post-list {
     a.post-link {
       text-decoration: none;
-      color: $black-color;
+      color: $black;
 
       &:hover {
         text-decoration: underline;
@@ -13,12 +13,12 @@ ul {
 
     .post-authors {
       @include relative-font-size(0.8);
-      color: $grey-color;
+      color: $grey;
     }
 
     .post-date {
       @include relative-font-size(0.7);
-      color: $grey-color;
+      color: $grey;
     }
   }
   
@@ -29,7 +29,7 @@ ul {
   // Social media list styling
   &.social-media-list {
     @include relative-font-size(0.7);
-    color: $grey-color;
+    color: $grey;
 
     li {
         padding-top: 3px;
@@ -47,5 +47,5 @@ ul {
 // Footer styling
 .timestamp {
   @include relative-font-size(0.5);
-  color: $grey-color-light;
+  color: $grey-light;
 }

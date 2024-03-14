@@ -3,12 +3,20 @@ layout: base
 ---
 <div class="container">
   <div class="row">
-    <div class="col-3" id="sticky-sidebar">
+    <div class="col-6 col-md-3">
       <img src="{{ '/assets/images/profile-picture.jpg' | relative_url }}" class="img-fluid rounded-3 profile-picture" alt="Photo">
+      <!-- Show the below block only if the viewport is greater than size md -->
+      <div class="d-none d-md-block">
+        <h4>Michael Peng</h4>
+        {%- include content/social-list.html -%}
+      </div>
+    </div>
+    <!-- Show the below block only if the viewport is smaller than size md -->
+    <div class="col-6 d-block d-md-none">
       <h4>Michael Peng</h4>
       {%- include content/social-list.html -%}
     </div>
-    <div class="col-8 introduction">
+    <div class="col-12 col-md-9 introduction">
       {{ content }}
       <h5>Recent Activity</h5>
       {%- include content/post-list.html max-items=5 -%}

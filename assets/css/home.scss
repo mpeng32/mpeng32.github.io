@@ -3,9 +3,17 @@
 @import "style";
 
 .profile-picture {
-    margin-bottom: 1rem;
+  @include media-query-at-least($md) {
+    max-width: 100%;
+  }
+  margin-bottom: 1rem;
 }
 
 .introduction {
-    padding-left: 60px;
+  @include media-query-at-most($md) {
+    padding-left: 1rem;
+  }
+  @include media-query-at-least($md) {
+    padding-left: 5rem;
+  }
 }
